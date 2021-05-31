@@ -26,15 +26,16 @@ while True:
             if money < commodity[num][1]:
                 print("您的余额不足，请重新选择商品")
             else:
-                if i==1:
-                    shop.append(commodity[num])
-                    money -= commodity[num][1]
-                    print("购买成功，您本次消费的商品为：", commodity[num], "账户余额为：", money)
-                if  num == c and i == 0:
+                if num == c and i == 0:
                     i += 1
                     shop.append(commodity[num])
                     money -= (commodity[num][1]/2)
                     print("购买成功，您本次消费的商品为：", commodity[num], "账户余额为：", money)
+                else:
+                    shop.append(commodity[num])
+                    money -= commodity[num][1]
+                    print("购买成功，您本次消费的商品为：", commodity[num], "账户余额为：", money)
+
     elif num == 'q' or num == 'Q':
         print("欢迎下次光临！")
         break
@@ -48,9 +49,6 @@ print("您的余额为：￥",money)
 b=int(commodity[c][1])
 if i==1:
     print("本次使用优惠卷为",coupon[c],"为您节省",b/2)
-
-
-
 
 
 
