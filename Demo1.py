@@ -11,7 +11,7 @@ coupon=["Iphone 12 pro 5折优惠卷!","HUAWEI watch 5折优惠卷!","lenovo PC 
     ,"Mac pc 5折优惠卷!","卫龙辣条 5折优惠卷!","老干妈  5折优惠卷!"]
 money=int(input("请输入您的余额："))
 shop=[]
-c=random.randint(0,6)
+c=random.randint(0,5)
 print("恭喜您已获得",coupon[c])
 i=0
 while True:
